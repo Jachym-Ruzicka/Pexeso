@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #2e7d32;
+    color: white;
+}
+
+#game-board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
