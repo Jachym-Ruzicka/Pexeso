@@ -1,13 +1,52 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #2e7d32;
+    background-image: url(doue.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
 }
 
 #game-board {
     display: grid;
+    grid-template-columns: repeat(6, 80px);
     gap: 10px;
     justify-content: center;
     margin: 20px auto;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #1b5e20;
+}
+
+.card.flipped {
+    background-color: #f1c40f;
+    font-size: 40px;
+    cursor: default;
+}
+
+.card.matched {
+    background-color: #8bc34a;
+    font-size: 40px;
+    cursor: default;
+    opacity: 0.7;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
 }
