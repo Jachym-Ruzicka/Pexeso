@@ -1,13 +1,41 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url(doue.jpg);
+    color: white;
+    margin: 0;
+    padding: 20px;
+    background-image: url('doue.jpg');
+    /**
+ * AI Used
+ * Model: Gemini 3.Pro
+ */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    color: white;
+    background-attachment: fixed;
 }
 
+h1, p {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 5px;
+    border: white solid 1px;
+}
+
+#scoreboard {
+    background-color: rgba(27, 94, 32, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid white;
+    width: 300px;
+    margin: 15px auto;
+}
+
+/**
+ * AI Used
+ * Model: Gemini 3.Pro
+ */
 #game-board {
     display: grid;
     grid-template-columns: repeat(6, 80px);
@@ -19,34 +47,55 @@ body {
 .card {
     width: 80px;
     height: 80px;
-    background-color: #ffffff;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
     font-size: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border-radius: 8px;
-    border: 2px solid #1b5e20;
 }
 
 .card.flipped {
-    background-color: #f1c40f;
+    background-color: peachpuff;
     font-size: 40px;
     cursor: default;
 }
 
 .card.matched {
-    background-color: #8bc34a;
+    background-color: forestgreen;
     font-size: 40px;
+    opacity: 0.8;
     cursor: default;
-    opacity: 0.7;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer;
-    background-color: white;
-    border: none;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
     border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/**
+ *
+ *
+ zkopirovanoi z cviceni z 3. rocniku
+ */
+@media (max-width: 600px) {
+    #game-board {
+        grid-template-columns: repeat(6, 50px);
+        gap: 5px;
+    }
+    .card {
+        width: 50px;
+        height: 50px;
+    }
+    .card.flipped, .card.matched {
+        font-size: 25px;
+    }
 }
